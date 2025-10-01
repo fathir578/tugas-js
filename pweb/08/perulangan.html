@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var ulangi = confirm("please take the cookies!!");
+        var counter = 0;
+        const pesan = [
+        "Please take the cookies!!",
+        "Come on, don’t refuse the cookies!",
+        "Seriously? These cookies are delicious!",
+        "Why do you keep saying no??",
+        "Last chance... take the cookies!",
+        "Fine... I’ll eat them all 😏"
+    ];
+
+
+while(!ulangi){
+    counter++;
+    ulangi = confirm(pesan[counter % pesan.length]);
+    let teks = pesan[counter % pesan.length];
+
+     ulangi = confirm("You rejected " + counter + " times!\n" + teks);
+    }
+
+var languages = ["Javascript", "HTML", "CSS", "Typescript"];
+
+for(i = 0; i < languages.length; i++){
+    document.write((i+1) + ". "+ languages[i] + "<br/>");
+}
+var counter = 0;
+
+while (ulangi) {
+    counter++;
+    var bintang = "*".repeat(counter) + "<br>";
+    document.write(counter + ": " + bintang);
+    ulangi = confirm("apakah anda ingin mengulang?")
+}
+document.write("akhinya kamu menerima cookies nya😏, stelah menolak sebanyak" + counter + " kali")
+
+
+
+    </script>
+</body>
+</html>
