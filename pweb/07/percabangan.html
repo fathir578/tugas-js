@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Contoh Percabangan di JavaScript</h1>
+  <div id="output"></div> <!-- Hasil percabangan akan muncul di sini -->
+ <script>
+    function tampil(teks) {
+      document.getElementById("output").innerHTML += teks + "<br>";
+    }
+
+    // 1. IF Statement
+    let nilai = prompt("Masukkan nilai Anda:");
+    if (nilai > 80) {
+      tampil("Nilai bagus, Anda lulus dengan predikat A");
+    }
+
+    // 2. IF ... ELSE Statement
+    let umur = prompt("Masukkan umur Anda:");
+    if (umur >= 17) {
+      tampil("Anda boleh membuat KTP");
+    } else {
+      tampil("Anda belum cukup umur untuk membuat KTP");
+    }
+
+    // 3. IF ... ELSE IF ... ELSE Statement
+    let skor = prompt("Masukkan skor ujian Anda:");
+    if (skor >= 85) {
+      tampil("Predikat: A");
+    } else if (skor >= 70) {
+      tampil("Predikat: B");
+    } else if (skor >= 55) {
+      tampil("Predikat: C");
+    } else {
+      tampil("Predikat: D");
+    }
+
+    // 4. Nested IF (percabangan bersarang)
+    let username = prompt("Masukkan username:");
+    let password = prompt("Masukkan password:");
+    if (username === "fathir") {
+      if (password === "12345") {
+        tampil("Login berhasil!");
+      } else {
+        tampil("Password salah!");
+      }
+    } else {
+      tampil("Username tidak ditemukan!");
+    }
+
+    // 5. SWITCH Statement dengan Prompt
+    let hari = prompt("Masukkan nama hari (contoh: Senin, Selasa, Rabu, dst):");
+    switch (hari) {
+      case "Senin":
+        tampil("Hari ini awal minggu kerja.");
+        break;
+      case "Jumat":
+        tampil("Hari ini menjelang akhir minggu kerja.");
+        break;
+      case "Sabtu":
+      case "Minggu":
+        tampil("Hari ini libur!");
+        break;
+      default:
+        tampil("Hari biasa.");
+        break;
+    }
+ </script>
+</body>
+</html>
+
+</body>
+</html>
