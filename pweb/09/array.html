@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>contoh penggunaan data dan array</h2>
+  <div id="output"></div>
+
+  <script>
+    // Fungsi untuk menampilkan hasil ke halaman
+    function tampil(teks) {
+      document.getElementById("output").innerHTML += teks + "<br>";
+    }
+
+    // ==============================
+    // 1. TIPE DATA PRIMITIF
+    // ==============================
+
+    // String (teks)
+    let nama = "Fathir";
+    tampil("String: " + nama);
+
+    // Number (angka)
+    let umur = 20;
+    tampil("Number: " + umur);
+
+    // Boolean (true / false)
+    let statusMahasiswa = true;
+    tampil("Boolean: " + statusMahasiswa);
+
+    // Null
+    let kosong = null;
+    tampil("Null: " + kosong);
+
+    // Undefined (variabel belum diisi)
+    let belumDiisi;
+    tampil("Undefined: " + belumDiisi);
+
+    tampil("<hr>");
+
+    // ==============================
+    // 2. ARRAY
+    // ==============================
+
+    // Array berisi daftar data
+    let buah = ["Apel", "Mangga", "Jeruk", "Pisang"];
+
+    // Menampilkan seluruh isi array
+    tampil("Isi Array Buah: " + buah);
+
+    // Mengakses elemen array (index mulai dari 0)
+    tampil("Buah pertama: " + buah[0]);
+    tampil("Buah ketiga: " + buah[2]);
+
+    // Menghitung panjang array
+    tampil("Jumlah buah: " + buah.length);
+
+    // Menambahkan data ke array
+    buah.push("Durian");
+    tampil("Setelah push (tambah Durian): " + buah);
+
+    // Menghapus data terakhir dari array
+    buah.pop();
+    tampil("Setelah pop (hapus terakhir): " + buah);
+
+    // Menghapus data pertama dari array
+    buah.shift();
+    tampil("Setelah shift (hapus pertama): " + buah);
+
+    // Menambahkan data di awal array
+    buah.unshift("Semangka");
+    tampil("Setelah unshift (tambah di awal): " + buah);
+
+    // Looping isi array
+    tampil("<br><b>Daftar Buah dengan Looping:</b>");
+    for (let i = 0; i < buah.length; i++) {
+      tampil((i+1) + ". " + buah[i]);
+    }
+
+    tampil("<hr>");
+
+    // ==============================
+    // 3. ARRAY MULTI DIMENSI
+    // ==============================
+    let dataSiswa = [
+      ["Budi", 18, "Teknik"],
+      ["Siti", 19, "Ekonomi"],
+      ["Andi", 20, "Hukum"]
+    ];
+
+    tampil("<b>Data Siswa (Array 2D):</b>");
+    for (let i = 0; i < dataSiswa.length; i++) {
+      tampil("Nama: " + dataSiswa[i][0] + 
+            ", Umur: " + dataSiswa[i][1] + 
+            ", Jurusan: " + dataSiswa[i][2]);
+    }
+  </script>
+</body>
+</html>
