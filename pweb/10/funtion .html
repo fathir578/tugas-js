@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <title>Belajar Function JS</title>
+</head>
+<body>
+  <h2>Contoh 4 Jenis Function di JavaScript</h2>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    // ==========================================
+    // 1. Function Declaration (Biasa)
+    // ==========================================
+    function salamDeclaration(nama) {
+      return "Halo " + nama + " (Function Declaration)";
+    }
+    output.innerHTML += salamDeclaration("Fathir") + "<br><br>";
+
+
+    // ==========================================
+    // 2. Function Expression
+    // ==========================================
+    const salamExpression = function(nama) {
+      return "Halo " + nama + " (Function Expression)";
+    };
+    output.innerHTML += salamExpression("Aisyah") + "<br><br>";
+
+
+    // ==========================================
+    // 3. Arrow Function
+    // ==========================================
+    const salamArrow = (nama) => {
+      return "Halo " + nama + " (Arrow Function)";
+    };
+    output.innerHTML += salamArrow("Budi") + "<br><br>";
+
+
+    // ==========================================
+    // 4. Function Constructor
+    // ==========================================
+    // Membuat function menggunakan "new Function"
+    const salamConstructor = new Function("nama", "return 'Halo ' + nama + ' (Function Constructor)';");
+    output.innerHTML += salamConstructor("Citra") + "<br><br>";
+
+  </script>
+</body>
+</html>
