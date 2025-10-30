@@ -19,15 +19,16 @@
         "Fine... I’ll eat them all 😏"
     ];
 
-
+// penggunaan while
 while(!ulangi){
     counter++;
     ulangi = confirm(pesan[counter % pesan.length]);
     let teks = pesan[counter % pesan.length];
 
-     ulangi = confirm("You rejected " + counter + " times!\n" + teks);
+    ulangi = confirm("You rejected " + counter + " times!\n" + teks);
     }
 
+    // penggunaan foreach
 var languages = ["Javascript", "HTML", "CSS", "Typescript"];
 
 for(i = 0; i < languages.length; i++){
@@ -42,9 +43,6 @@ while (ulangi) {
     ulangi = confirm("apakah anda ingin mengulang?")
 }
 document.write("akhinya kamu menerima cookies nya😏, stelah menolak sebanyak" + counter + " kali")
-
-
-
     </script>
 </body>
 </html>

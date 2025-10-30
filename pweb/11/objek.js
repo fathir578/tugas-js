@@ -4,7 +4,7 @@
 let mobil = {
     // ====== PROPERTIES ======
     // Properti adalah data/atribut yang dimiliki oleh objek
-    merk: "Toyota",
+    merk: "bmw",
     warna: "Hitam",
     tahun: 2020,
     kecepatan: 0,
