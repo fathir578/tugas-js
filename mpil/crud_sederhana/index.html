@@ -81,7 +81,11 @@
       document.getElementById("nama").value = data[index]
       editIndex = index
     }
-
+    
+      function hapusData(index) {
+      data.splice(index, 1)
+      renderData()
+    }
     </script>
 
 </body>
