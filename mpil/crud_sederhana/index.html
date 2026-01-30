@@ -36,11 +36,20 @@
   <ul id="list"></ul>
 
   <script>
-    // ========================
-    // DATABASE SEMENTARA
-    // ========================
+
     let data = []
     let editIndex = null
+
+     function tambahData() {
+      const input = document.getElementById("nama")
+      const nama = input.value.trim()
+
+      if (nama === "") {
+        alert("Nama tidak boleh kosong")
+        return
+      }
+
+
     </script>
 
 </body>
