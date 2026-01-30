@@ -51,6 +51,15 @@
       if (editIndex === null) {
         // CREATE
         data.push(nama)
+         } else {
+        // UPDATE
+        data[editIndex] = nama
+        editIndex = null
+      }
+
+      input.value = ""
+      renderData()
+    }
 
     </script>
 
