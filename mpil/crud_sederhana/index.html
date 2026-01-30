@@ -61,6 +61,21 @@
       renderData()
     }
 
+     function renderData() {
+      const list = document.getElementById("list")
+      list.innerHTML = ""
+
+      data.forEach((item, index) => {
+        list.innerHTML += `
+          <li>
+            ${item}
+            <button onclick="editData(${index})">Edit</button>
+            <button onclick="hapusData(${index})">Hapus</button>
+          </li>
+        `
+      })
+    }
+
     </script>
 
 </body>
