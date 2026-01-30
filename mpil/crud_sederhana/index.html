@@ -72,8 +72,14 @@
             <button onclick="editData(${index})">Edit</button>
             <button onclick="hapusData(${index})">Hapus</button>
           </li>
+
+        
         `
       })
+    }
+       function editData(index) {
+      document.getElementById("nama").value = data[index]
+      editIndex = index
     }
 
     </script>
